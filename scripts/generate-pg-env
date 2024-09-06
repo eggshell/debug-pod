@@ -1,0 +1,15 @@
+#!/bin/bash
+
+ENV_LOCATION=~/.pgenv
+
+if [ ! -f $ENV_LOCATION ]; then
+    touch $ENV_LOCATION
+fi
+
+cat <<EOF > $ENV_LOCATION
+export PGHOST=
+export PGPORT=
+export PGUSER=
+export PGPASSWORD=
+export PGDATABASE=
+EOF
